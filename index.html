@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="title">
+      <h1>Learn to code by wacthing others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. 
+      </p>
+    </div>
+    
+    <div class="container">
+      <div class="subscription-container">
+        <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+      </div>
+
+      <form class="main-container" id="reset-button" onsubmit="validate(); return false;">
+        <div class="input-section">
+          <input type="text" value="" placeholder="First Name" id="first-name" class="btn">
+          <p class="error-message1">First Name cannot be empty</p>
+        </div>
+        
+        <div class="input-section">
+          <input type="text" value="" placeholder="Last Name" id="last-name" class="btn">
+          <p class="error-message2">Last Name cannot be empty</p>
+        </div>
+        
+        <div class="input-section">
+          <input type="email" value="" placeholder="Email Address" id="email" class="btn">
+          <p class="error-message3">Looks like this is not an email</p>
+        </div>
+        
+        <div class="input-section">
+          <input type="password" value="" placeholder="Password" id="password" minlength="8" class="btn">
+          <p class="error-message4">Password cannot be empty</p>
+        </div>
+        
+        <button class="free-trial" onclick="validate()">CLAIM YOUR FREE TRIAL</button>
+        <p class="terms-services">
+          By clicking the button, you are agreeing to our  <a href="#">Terms and Services</a>
+        </p>
+      </form>
+    </div>
+
+    <div class="thanks-message">
+      <h2>Thanks for subscribing to our channel</h2>
+      <p>You have recieved a message at <span class="mailbox"></span> for further instructions concerning your subscription. We are very happy to work with you.</p>
+      <p>Click <span class="return-btn" onclick="resetButton()">here</span> to return to sign up page</p>
+    </div>  
+
+    <div class="dark-bk"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
